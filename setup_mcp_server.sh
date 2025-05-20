@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 # Setup script for Kali Linux MCP Server
 
+sudo apt install python3-pip -y
+sudo apt install python3-venv -y
+python3 -m venv --help
+python3 -m ensurepip --version
+
+
 set -e  # Exit on error
 set -o pipefail
 
