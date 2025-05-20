@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 # Setup script for Kali Linux MCP Server
 
-sudo apt install python3-pip -y
-sudo apt install python3-venv -y
+sudo apt install -y python3-pip python3-venv gnome-terminal
 python3 -m venv --help
 python3 -m ensurepip --version
 
@@ -71,6 +70,10 @@ fi
 echo "🧪 Activating virtual environment..."
 # shellcheck source=/dev/null
 source venv/bin/activate
+
+# Install packages inside Python evnironment
+echo "Installing torch..."
+pip install transformers torch
 
 # Check for requirements.txt
 if [ ! -f requirements.txt ]; then
