@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 # Setup script for Kali Linux MCP Server
 
-sudo apt install -y python3-pip python3-venv gnome-terminal
+sudo apt install -y python3-pip python3-venv gnome-terminal pipx
 python3 -m venv --help
 python3 -m ensurepip --version
+pipx ensurepath
+
+sudo git clone https://github.com/yen5004/project_astro.git
+cd project_astro
 
 
 set -e  # Exit on error
