@@ -9,6 +9,10 @@ pipx ensurepath
 sudo git clone https://github.com/yen5004/project_astro.git
 cd project_astro
 
+# Download Ollama
+echo "Intalling Ollama"
+curl -fsSL https://ollama.com/install.sh | sh
+
 
 set -e  # Exit on error
 set -o pipefail
